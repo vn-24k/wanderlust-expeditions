@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-brand: #4eedb8;
+  --color-brand-glow: rgba(78, 237, 184, 0.35);
+  --bg-deep: #050d12;
+}
+
+body {
+  background-color: var(--bg-deep);
+  color: #f1f5f9;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+.font-editorial {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-syne {
+  font-family: 'Syne', sans-serif;
+}
+
+.font-mono-tech {
+  font-family: 'DM Mono', monospace;
+}
+
+/* Custom discreet scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #04090d;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e3a47;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4eedb8;
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: rgba(8, 20, 27, 0.72);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card {
+  background: rgba(13, 30, 40, 0.55);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.glow-brand {
+  box-shadow: 0 0 35px rgba(78, 237, 184, 0.25);
+}
+
+/* Subtle map line stroke animation */
+@keyframes dash {
+  to {
+    stroke-dashoffset: -100;
+  }
+}
+.route-path {
+  stroke-dasharray: 6 6;
+  animation: dash 18s linear infinite;
+}
