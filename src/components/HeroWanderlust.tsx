@@ -17,16 +17,14 @@ import {
   CalendarCheck2,
   Lock,
   ChevronRight,
-  SlidersHorizontal,
   X
 } from "lucide-react";
 
 interface HeroWanderlustProps {
-  onOpenCockpit: () => void;
   onExploreClick: () => void;
 }
 
-export const HeroWanderlust: React.FC<HeroWanderlustProps> = ({ onOpenCockpit, onExploreClick }) => {
+export const HeroWanderlust: React.FC<HeroWanderlustProps> = ({ onExploreClick }) => {
   const [activeTab, setActiveTab] = useState<"flights" | "hotels" | "experiences">("flights");
   const [fromCity, setFromCity] = useState("New York (JFK)");
   const [toCity, setToCity] = useState("Bali, Indonesia");
@@ -145,16 +143,6 @@ export const HeroWanderlust: React.FC<HeroWanderlustProps> = ({ onOpenCockpit, o
             <span>EN</span>
             <ChevronRight className="w-3 h-3 rotate-90 opacity-60" />
           </div>
-
-          {/* Cockpit Drawer Trigger (Organized Subsystem Drawer) */}
-          <button
-            onClick={onOpenCockpit}
-            className="px-3 py-2 rounded-xl bg-white/[0.08] hover:bg-white/[0.15] border border-white/15 backdrop-blur-md text-xs font-mono-tech text-[#4eedb8] flex items-center gap-2 transition-all hover:scale-105"
-            title="Abrir Central de Telemetria e Instrumentação de Voo"
-          >
-            <SlidersHorizontal className="w-3.5 h-3.5" />
-            <span className="hidden md:inline">Painel de Bordo (22)</span>
-          </button>
 
           {/* Plan Your Trip CTA */}
           <button

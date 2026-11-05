@@ -8,13 +8,11 @@ import { CylinderExpeditionGallery } from "./components/CylinderExpeditionGaller
 import { ExpeditionDialTelemetry } from "./components/ExpeditionDialTelemetry";
 import { SpotlightFrameAccordions } from "./components/SpotlightFrameAccordions";
 import { ExpeditionPassCubes } from "./components/ExpeditionPassCubes";
-import { CockpitDrawer } from "./components/CockpitDrawer";
 import { FooterWanderlust } from "./components/FooterWanderlust";
 import confetti from "canvas-confetti";
-import { SlidersHorizontal, CheckCircle2, X } from "lucide-react";
+import { CheckCircle2, X } from "lucide-react";
 
 export function App() {
-  const [isCockpitOpen, setIsCockpitOpen] = useState(false);
   const [notification, setNotification] = useState<string | null>(null);
 
   const handleBookingCelebration = () => {
@@ -42,7 +40,6 @@ export function App() {
       {/* 1. Hero 1:1 Reference Replication */}
       <section id="hero">
         <HeroWanderlust
-          onOpenCockpit={() => setIsCockpitOpen(true)}
           onExploreClick={() => {
             scrollToSection("vortex");
             handleBookingCelebration();
@@ -90,22 +87,6 @@ export function App() {
 
       {/* 10. Footer */}
       <FooterWanderlust />
-
-      {/* Retractable Engineering Drawer (22 strictly scoped Uiverse components) */}
-      <CockpitDrawer
-        isOpen={isCockpitOpen}
-        onClose={() => setIsCockpitOpen(false)}
-      />
-
-      {/* Floating Cockpit Trigger Button (Quick access to 22 Uiverse instruments) */}
-      <button
-        onClick={() => setIsCockpitOpen(true)}
-        className="fixed bottom-6 right-6 z-40 px-4 py-3 rounded-2xl bg-[#091822]/90 hover:bg-[#0c202d] text-[#4eedb8] border border-[#4eedb8]/40 backdrop-blur-xl shadow-2xl flex items-center gap-2.5 font-mono-tech text-xs tracking-wider uppercase transition-all duration-300 hover:scale-105 group"
-      >
-        <span className="w-2.5 h-2.5 rounded-full bg-[#4eedb8] animate-ping" />
-        <SlidersHorizontal className="w-4 h-4 text-[#4eedb8]" />
-        <span className="hidden sm:inline font-bold">Painel de Bordo (22)</span>
-      </button>
 
       {/* Notification Toast */}
       {notification && (

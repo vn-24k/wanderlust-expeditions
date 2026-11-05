@@ -12,7 +12,7 @@ Plataforma de alta precisão para logística expedicionária, navegação aeroes
 - **Mostrador de Azimute & Instrumentação Barométrica (Mineral-Dial Engine)**: Anel gradativo com 180 divisões radiais sincronizado a telemetria climática em tempo real.
 - **Painéis de Foco Expansível (Accordions-Frames Engine)**: Estrutura modular com transição elástica de foco para itinerários de alta curadoria.
 - **Cubos de Perspectiva 3D (3D-CARDS Engine)**: Credenciais volumétricas com 6 faces e efeito giroscópio.
-- **Central de Bordo & Instrumentação**: 22 subsistemas interativos encapsulados sob isolamento estrito de CSS (zero contaminação global).
+- **Design Orgânico & Fluido**: Ausência de gavetas ou painéis forçados, priorizando elegância de elite e respiro visual.
 
 ---
 
